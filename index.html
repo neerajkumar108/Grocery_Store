@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Grocery Store</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>
+
+<header class="site-header">
+    <nav class="navbar">
+        <ul class="nav-list">
+            <li class="nav-item"><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li class="nav-item"><a href="products.html"><i class="fas fa-box"></i> Products</a></li>
+            <li class="nav-item"><a href="cart.html"><i class="fas fa-shopping-cart"></i> Cart <span class="cart-badge">0</span></a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="hero">
+        <h1>Welcome to Our Grocery Store!</h1>
+        <p>Fresh and quality products delivered to your doorstep.</p>
+    </section>
+
+    <section class="product-grid">
+        <h2>Featured Products</h2>
+        <div class="flex-container">
+            <div class="product">
+                <img src="https://www.bbassets.com/media/uploads/p/l/40253563_1-madhur-sugar-pure-hygienic-fine-grain-natural-sulphur-free.jpg" alt="Sugar">
+                <p>Sugar</p>
+                <p>₹50</p>
+                <button class="add-to-cart" onclick="addToCart(1)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                <span class="added-to-cart" style="display: none;">&#10004;</span>
+            </div>
+            <div class="product">
+                <img src="https://www.bbassets.com/media/uploads/p/m/10000067_26-fresho-capsicum-green.jpg?tr=w-154,q-80" alt="Capsicum">
+                <p>Capsicum - Green (Loose)</p>
+                <p>₹48/kg</p>
+                <button class="add-to-cart" onclick="addToCart(2)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                <span class="added-to-cart" style="display: none;">&#10004;</span>
+            </div>
+            <div class="product">
+                <img src="https://www.bbassets.com/media/uploads/p/l/10000074_20-fresho-cauliflower.jpg" alt="Cauliflower">
+                <p>Cauliflower, 1 pc (approx. 400 to 600 g)</p>
+                <p>₹25</p>
+                <button class="add-to-cart" onclick="addToCart(3)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                <span class="added-to-cart" style="display: none;">&#10004;</span>
+            </div>
+        </div>
+        <div class="product" style="text-align: center;">
+            <button class="view" onclick="window.location.href='products.html'"><i class="fas fa-box-open"></i> View More</button>
+        </div>
+    </section>
+</main>
+
+<div class="aboutus">
+    <h2>About Us</h2>
+    <p>We are committed to providing the freshest and highest quality grocery products to our customers.</p>
+    <p>Our mission is to make grocery shopping convenient and enjoyable.</p>
+</div>
+
+<footer>
+    <p><i class="fas fa-phone"></i> Contact Us: +91 9430651755</p>
+</footer>
+
+<!-- Toast Notification -->
+<div class="toast" id="toast">Added to cart!</div>
+
+<script src="script.js"></script>
+<script>
+    updateCartBadge && updateCartBadge();
+</script>
+</body>
+</html>
